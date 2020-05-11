@@ -1,0 +1,158 @@
+2020-05-10 21:40:13.235  INFO 8438 --- [restartedMain] c.cg.dd.app.RawMaterialStockApplication  : No active profile set, falling back to default profiles: default
+2020-05-10 21:40:14.787  INFO 8438 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-10 21:40:14.813  INFO 8438 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 JPA repository interfaces.
+2020-05-10 21:40:15.031  WARN 8438 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-05-10 21:40:15.168  INFO 8438 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ba89ac8a-89e8-380d-a9da-5e5ce9f461e1
+2020-05-10 21:40:16.162  INFO 8438 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8010 (http)
+2020-05-10 21:40:16.170  INFO 8438 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-10 21:40:16.171  INFO 8438 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-10 21:40:16.460  INFO 8438 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-10 21:40:16.460  INFO 8438 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3181 ms
+2020-05-10 21:40:16.540  WARN 8438 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-10 21:40:16.541  INFO 8438 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-10 21:40:16.549  INFO 8438 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4b2bf2ce
+2020-05-10 21:40:17.231  INFO 8438 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-10 21:40:17.293  INFO 8438 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-10 21:40:17.371  INFO 8438 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-10 21:40:17.440  INFO 8438 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-10 21:40:17.443  WARN 8438 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-05-10 21:40:17.988  INFO 8438 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-10 21:40:18.002  INFO 8438 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-05-10 21:40:18.689  INFO 8438 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-10 21:40:18.694  INFO 8438 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-10 21:40:18.743  WARN 8438 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-05-10 21:40:19.030  WARN 8438 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-10 21:40:19.195  INFO 8438 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-05-10 21:40:19.277  INFO 8438 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-10 21:40:19.286  WARN 8438 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-10 21:40:19.286  INFO 8438 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-10 21:40:19.396  INFO 8438 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-10 21:40:19.845  WARN 8438 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-10 21:40:19.951  INFO 8438 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-05-10 21:40:19.978  INFO 8438 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-10 21:40:20.080  INFO 8438 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-10 21:40:20.081  INFO 8438 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-10 21:40:20.215  INFO 8438 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-10 21:40:20.215  INFO 8438 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-10 21:40:20.445  INFO 8438 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-10 21:40:20.464  INFO 8438 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-10 21:40:20.464  INFO 8438 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-10 21:40:20.464  INFO 8438 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-10 21:40:20.464  INFO 8438 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-10 21:40:20.464  INFO 8438 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-10 21:40:20.464  INFO 8438 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-10 21:40:20.465  INFO 8438 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-10 21:40:20.575  INFO 8438 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-10 21:40:20.577  INFO 8438 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-10 21:40:20.579  INFO 8438 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-10 21:40:20.583  INFO 8438 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1589127020582 with initial instances count: 3
+2020-05-10 21:40:20.586  INFO 8438 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application RAWMATERIAL-STOCK with eureka with status UP
+2020-05-10 21:40:20.587  INFO 8438 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1589127020587, current=UP, previous=STARTING]
+2020-05-10 21:40:20.589  INFO 8438 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RAWMATERIAL-STOCK/192.168.0.105:rawmaterial-stock:8010: registering service...
+2020-05-10 21:40:20.591  INFO 8438 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-05-10 21:40:20.604  INFO 8438 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-05-10 21:40:20.632  INFO 8438 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RAWMATERIAL-STOCK/192.168.0.105:rawmaterial-stock:8010 - registration status: 204
+2020-05-10 21:40:20.647  INFO 8438 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-05-10 21:40:20.775  INFO 8438 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2020-05-10 21:40:20.778  INFO 8438 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2020-05-10 21:40:20.906  INFO 8438 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8010 (http) with context path ''
+2020-05-10 21:40:20.908  INFO 8438 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8010
+2020-05-10 21:40:21.047  INFO 8438 --- [restartedMain] c.cg.dd.app.RawMaterialStockApplication  : Started RawMaterialStockApplication in 9.139 seconds (JVM running for 10.753)
+2020-05-10 21:41:20.797  INFO 8438 --- [http-nio-8010-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-10 21:41:21.016  INFO 8438 --- [http-nio-8010-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-10 21:41:21.037  INFO 8438 --- [http-nio-8010-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
+2020-05-10 21:41:21.655  INFO 8438 --- [http-nio-8010-exec-2] c.netflix.discovery.shared.Application   : adding supplier
+2020-05-10 21:45:10.136  INFO 8438 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-05-10 21:45:10.159  INFO 8438 --- [RMI TCP Connection(2)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application RAWMATERIAL-STOCK with eureka with status DOWN
+2020-05-10 21:45:10.160  WARN 8438 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1589127310160, current=DOWN, previous=UP]
+2020-05-10 21:45:10.160  INFO 8438 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RAWMATERIAL-STOCK/192.168.0.105:rawmaterial-stock:8010: registering service...
+2020-05-10 21:45:10.166  INFO 8438 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RAWMATERIAL-STOCK/192.168.0.105:rawmaterial-stock:8010 - registration status: 204
+2020-05-10 21:45:10.168  INFO 8438 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-10 21:45:10.171  INFO 8438 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-10 21:45:10.178  INFO 8438 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-10 21:45:10.191  INFO 8438 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-10 21:45:10.192  INFO 8438 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-10 21:45:13.195  INFO 8438 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-10 21:45:13.200  INFO 8438 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RAWMATERIAL-STOCK/192.168.0.105:rawmaterial-stock:8010 - deregister  status: 200
+2020-05-10 21:45:13.219  INFO 8438 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-10 21:45:13.222  INFO 8438 --- [RMI TCP Connection(2)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-05-10 21:45:13.226  INFO 8438 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-05-10 21:57:16.084  INFO 9578 --- [restartedMain] c.cg.dd.app.RawMaterialStockApplication  : No active profile set, falling back to default profiles: default
+2020-05-10 21:57:21.191  INFO 9578 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-10 21:57:21.360  INFO 9578 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99ms. Found 0 JPA repository interfaces.
+2020-05-10 21:57:21.806  WARN 9578 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-05-10 21:57:22.138  INFO 9578 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ba89ac8a-89e8-380d-a9da-5e5ce9f461e1
+2020-05-10 21:57:23.968  INFO 9578 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8010 (http)
+2020-05-10 21:57:24.007  INFO 9578 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-10 21:57:24.008  INFO 9578 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-10 21:57:24.313  INFO 9578 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-10 21:57:24.314  INFO 9578 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8195 ms
+2020-05-10 21:57:24.451  WARN 9578 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-10 21:57:24.457  INFO 9578 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-10 21:57:24.476  INFO 9578 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@40d696c6
+2020-05-10 21:57:25.673  INFO 9578 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-10 21:57:25.923  INFO 9578 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-10 21:57:26.579  INFO 9578 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-10 21:57:26.815  INFO 9578 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-10 21:57:26.842  WARN 9578 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-05-10 21:57:32.517  INFO 9578 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-10 21:57:32.628  INFO 9578 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-05-10 21:57:36.631  INFO 9578 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-10 21:57:36.661  INFO 9578 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-10 21:57:36.754  WARN 9578 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-05-10 21:57:37.166  WARN 9578 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-10 21:57:37.453  INFO 9578 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-05-10 21:57:37.982  INFO 9578 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-10 21:57:37.992  WARN 9578 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-10 21:57:37.992  INFO 9578 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-10 21:57:38.238  INFO 9578 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-10 21:57:38.937  WARN 9578 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-10 21:57:39.180  INFO 9578 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-05-10 21:57:39.221  INFO 9578 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-10 21:57:39.487  INFO 9578 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-10 21:57:39.488  INFO 9578 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-10 21:57:39.824  INFO 9578 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-10 21:57:39.824  INFO 9578 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-10 21:57:40.316  INFO 9578 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-10 21:57:40.371  INFO 9578 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-10 21:57:40.371  INFO 9578 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-10 21:57:40.371  INFO 9578 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-10 21:57:40.371  INFO 9578 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-10 21:57:40.371  INFO 9578 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-10 21:57:40.371  INFO 9578 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-10 21:57:40.372  INFO 9578 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-10 21:57:40.662  INFO 9578 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-10 21:57:40.708  INFO 9578 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-10 21:57:40.735  INFO 9578 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-10 21:57:40.740  INFO 9578 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1589128060738 with initial instances count: 3
+2020-05-10 21:57:40.743  INFO 9578 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application RAWMATERIAL-STOCK with eureka with status UP
+2020-05-10 21:57:40.748  INFO 9578 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1589128060748, current=UP, previous=STARTING]
+2020-05-10 21:57:40.751  INFO 9578 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RAWMATERIAL-STOCK/192.168.0.105:rawmaterial-stock:8010: registering service...
+2020-05-10 21:57:40.753  INFO 9578 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-05-10 21:57:40.882  INFO 9578 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-10 21:57:40.883  INFO 9578 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-10 21:57:40.899  INFO 9578 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-05-10 21:57:40.905  INFO 9578 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2020-05-10 21:57:40.906  INFO 9578 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RAWMATERIAL-STOCK/192.168.0.105:rawmaterial-stock:8010 - registration status: 204
+2020-05-10 21:57:41.032  INFO 9578 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-05-10 21:57:41.441  INFO 9578 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2020-05-10 21:57:41.493  INFO 9578 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2020-05-10 21:57:41.714  INFO 9578 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8010 (http) with context path ''
+2020-05-10 21:57:41.717  INFO 9578 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8010
+2020-05-10 21:57:41.967  INFO 9578 --- [restartedMain] c.cg.dd.app.RawMaterialStockApplication  : Started RawMaterialStockApplication in 30.608 seconds (JVM running for 36.943)
+2020-05-10 21:57:46.872  INFO 9578 --- [http-nio-8010-exec-2] c.netflix.discovery.shared.Application   : adding supplier
+2020-05-10 22:00:14.468  INFO 9578 --- [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-05-10 22:00:14.487  INFO 9578 --- [RMI TCP Connection(4)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application RAWMATERIAL-STOCK with eureka with status DOWN
+2020-05-10 22:00:14.488  WARN 9578 --- [RMI TCP Connection(4)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1589128214488, current=DOWN, previous=UP]
+2020-05-10 22:00:14.489  INFO 9578 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RAWMATERIAL-STOCK/192.168.0.105:rawmaterial-stock:8010: registering service...
+2020-05-10 22:00:14.504  INFO 9578 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RAWMATERIAL-STOCK/192.168.0.105:rawmaterial-stock:8010 - registration status: 204
+2020-05-10 22:00:14.510  INFO 9578 --- [RMI TCP Connection(4)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-10 22:00:14.515  INFO 9578 --- [RMI TCP Connection(4)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-10 22:00:14.523  INFO 9578 --- [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-10 22:00:14.545  INFO 9578 --- [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-10 22:00:14.547  INFO 9578 --- [RMI TCP Connection(4)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-10 22:00:17.549  INFO 9578 --- [RMI TCP Connection(4)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-10 22:00:17.555  INFO 9578 --- [RMI TCP Connection(4)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RAWMATERIAL-STOCK/192.168.0.105:rawmaterial-stock:8010 - deregister  status: 200
+2020-05-10 22:00:17.575  INFO 9578 --- [RMI TCP Connection(4)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-10 22:00:17.578  INFO 9578 --- [RMI TCP Connection(4)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-05-10 22:00:17.582  INFO 9578 --- [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
