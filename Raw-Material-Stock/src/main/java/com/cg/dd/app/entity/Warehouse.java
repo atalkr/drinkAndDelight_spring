@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name="tbl_warehouses")
+@Table(name="warehouses")
 @SequenceGenerator(name="seq", initialValue=1001, allocationSize=100)
 public class Warehouse {
 

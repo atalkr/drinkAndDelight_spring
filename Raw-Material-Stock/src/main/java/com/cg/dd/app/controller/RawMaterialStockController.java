@@ -27,7 +27,7 @@ public class RawMaterialStockController {
 
 	@Autowired
 	RawMaterialStockService service;
-    private static final Logger LOGGER=LoggerFactory.getLogger(Application.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
 
 	@PostMapping("/addStock")
 	@HystrixCommand(fallbackMethod = "fallbackaddStock")

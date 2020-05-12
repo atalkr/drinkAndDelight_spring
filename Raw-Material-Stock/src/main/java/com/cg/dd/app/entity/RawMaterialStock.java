@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "tbl_rawmaterial_stocks")
+@Table(name = "rawmaterial_stocks")
 @SequenceGenerator(name="seq", initialValue=1001, allocationSize=100)
 public class RawMaterialStock {
 

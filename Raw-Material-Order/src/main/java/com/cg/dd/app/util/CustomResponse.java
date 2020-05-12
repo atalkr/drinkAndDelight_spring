@@ -1,4 +1,4 @@
-package com.cg.dd.app.entity;
+package com.cg.dd.app.util;
 /**
  * @author Atal_kumar
  * May 05, 2020

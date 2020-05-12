@@ -18,7 +18,7 @@ import javax.validation.constraints.NotNull;
  * May 04, 2020
  */
 @Entity
-@Table(name = "tbl_product_stocks")
+@Table(name = "product_stocks")
 @SequenceGenerator(name = "seq", initialValue = 1001, allocationSize = 100)
 public class ProductStock {
 

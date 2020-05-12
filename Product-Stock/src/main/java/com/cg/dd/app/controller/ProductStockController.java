@@ -20,9 +20,9 @@ import com.cg.dd.app.entity.Warehouse;
 import com.cg.dd.app.service.ProductStockService;
 import com.netflix.discovery.shared.Application;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
 /**
- * @author Atal_kumar
- * May 04, 2020
+ * @author Atal_kumar May 04, 2020
  */
 @RestController
 @CrossOrigin("http://localhost:4200")
@@ -30,7 +30,7 @@ public class ProductStockController {
 
 	@Autowired
 	ProductStockService service;
-    private static final Logger LOGGER=LoggerFactory.getLogger(Application.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
 
 	@PostMapping("/addStock")
 	@HystrixCommand(fallbackMethod = "fallbackaddStock")

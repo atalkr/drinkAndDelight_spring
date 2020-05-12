@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
  * May 05, 2020
  */
 @Entity
-@Table(name = "tbl_suppliers")
+@Table(name = "suppliers")
 @SequenceGenerator(name = "seq", initialValue = 1001, allocationSize = 100)
 public class Supplier {
 

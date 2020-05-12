@@ -11,20 +11,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cg.dd.app.entity.CustomResponse;
 import com.cg.dd.app.entity.Distributor;
 import com.cg.dd.app.entity.ProductOrder;
+import com.cg.dd.app.entity.Warehouse;
 import com.cg.dd.app.service.ProductService;
 import com.netflix.discovery.shared.Application;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
-
 /**
- * @author Atal_kumar
- * May 04, 2020
+ * @author Atal_kumar May 04, 2020
  */
 @RestController
 @CrossOrigin("http://localhost:4200")
@@ -32,13 +30,13 @@ public class ProductOrderController {
 
 	@Autowired
 	ProductService service;
-    private static final Logger LOGGER=LoggerFactory.getLogger(Application.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
 	ProductOrder order;
 
 	@PostMapping("/addOrder")
 	@HystrixCommand(fallbackMethod = "fallbackaddOrder")
 	public ProductOrder addOrder(@RequestBody ProductOrder order) {
-        LOGGER.info("adding order");
+		LOGGER.info("adding order");
 		return service.saveProductOrder(order);
 	}
 
@@ -59,7 +57,7 @@ public class ProductOrderController {
 	@GetMapping("/getDistributors")
 	@HystrixCommand(fallbackMethod = "fallbackgetDistributor")
 	public List<Distributor> getDistributor() {
-        LOGGER.info("getting distributor");
+		LOGGER.info("getting distributor");
 		return service.getAllDistributor();
 	}
 
@@ -68,6 +66,12 @@ public class ProductOrderController {
 	public List<ProductOrder> getProductOrders() {
 		LOGGER.info("getting orders");
 		return service.getProductOrders();
+	}
+	@GetMapping("/getWarehouses")
+	@HystrixCommand(fallbackMethod = "fallbackgetWarehouses")
+	public List<Warehouse> getWarehouses() {
+		LOGGER.info("getting warehouses");
+		return service.getAllWarehouse();
 	}
 
 	public ProductOrder fallbackaddOrder(@RequestBody ProductOrder order) {
@@ -92,6 +96,10 @@ public class ProductOrderController {
 
 	public List<ProductOrder> fallbackgetProductOrders() {
 		LOGGER.error("getting product orders failed !");
+		return new ArrayList<>();
+	}
+	public List<Warehouse> fallbackgetWarehouses() {
+		LOGGER.error("getting warehouses failed !");
 		return new ArrayList<>();
 	}
 

@@ -20,7 +20,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  * May 05, 2020
  */
 @Entity
-@Table(name = "tbl_rawmaterial_orders")
+@Table(name = "rawmaterial_orders")
 @SequenceGenerator(name="seq", initialValue=1001, allocationSize=100)
 public class RawMaterialOrder {
 

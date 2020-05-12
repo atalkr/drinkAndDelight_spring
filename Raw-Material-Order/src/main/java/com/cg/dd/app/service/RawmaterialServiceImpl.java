@@ -2,13 +2,17 @@ package com.cg.dd.app.service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cg.dd.app.dao.RawmaterialDAO;
 import com.cg.dd.app.entity.RawMaterialOrder;
 import com.cg.dd.app.entity.Supplier;
 import com.cg.dd.app.entity.Warehouse;
+import com.cg.dd.app.repository.RawMaterialOrderRepo;
+import com.cg.dd.app.repository.SupplierRepo;
+import com.cg.dd.app.repository.WarehouseRepo;
 /**
  * @author Atal_kumar
  * May 05, 2020
@@ -17,54 +21,75 @@ import com.cg.dd.app.entity.Warehouse;
 public class RawmaterialServiceImpl implements RawmaterialService {
 
 	@Autowired
-	RawmaterialDAO dao;
+	RawMaterialOrderRepo orderRepo;
+	
+	@Autowired
+	SupplierRepo supplierRepo;
+	
+	@Autowired
+	WarehouseRepo warehouseRepo;
 
 	@Override
 	public boolean doesRawMaterialOrderIdExists(int id) {
-		return dao.doesRawMaterialOrderIdExists(id);
+		return orderRepo.existsById(id);
 	}
 
 	@Override
+	@Transactional
 	public RawMaterialOrder saveRawmaterialOrder(RawMaterialOrder order) {
 		order.setDateOfOrder(java.time.LocalDate.now());
 		double totalPrice = order.getQuantityUnit() * order.getPricePerUnit();
 		order.setTotalPrice(totalPrice);
 		order.setDeliveryStatus("ordered");
-		return dao.saveRawmaterialOrder(order);
+		return orderRepo.saveAndFlush(order);
 	}
 
 	@Override
+	@Transactional
 	public String trackRawmaterialOrder(int id) {
-		return dao.trackRawmaterialOrder(id);
+		if (orderRepo.existsById(id)) {
+			RawMaterialOrder order=orderRepo.getOne(id);
+			return order.getDeliveryStatus();
+		}
+		return "invalid order id";
 	}
 
 	@Override
+	@Transactional
 	public String updateRawmaterialOrder(int id, String status) {
-		if (dao.doesRawMaterialOrderIdExists(id)) {
-			dao.updateRawmaterialOrder(id, status);
+		if (orderRepo.existsById(id)) {
+			orderRepo.updateStatus(id, status);
 			return "updated";
 		}
 		return "updation failed";
 	}
 
 	@Override
+	@Transactional
 	public List<Supplier> getAllSupplier() {
-		return dao.getAllSupplier();
+		return supplierRepo.findAll();
 	}
 
 	@Override
+	@Transactional
 	public Supplier getSupplierById(int id) {
-		return dao.getSupplierById(id);
+		if (orderRepo.existsById(id)) {
+			return supplierRepo.findById(id).orElse(null);
+		}
+		return new Supplier();
+		
 	}
 
 	@Override
+	@Transactional
 	public List<Warehouse> getWarehouses() {
-		return dao.getWarehouses();
+		return warehouseRepo.findAll();
 	}
 
 	@Override
+	@Transactional
 	public List<RawMaterialOrder> getAllOrders() {
-		return dao.getAllOrders();
+		return orderRepo.findAll();
 	}
 
 }
